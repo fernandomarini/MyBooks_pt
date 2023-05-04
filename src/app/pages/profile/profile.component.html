@@ -1,0 +1,23 @@
+<div class="main">
+    <form class="card" action="">
+        <div class="img-perfil">
+            <img class="foto-perfil" src={{newUser.photo}} alt=""> 
+        </div>
+        <h2 class="titleName">{{newUser.name}} {{newUser.last_name}} </h2>
+        <div class="perfil">             
+            <h3 class="input">{{newUser.name}}</h3>
+            <h3 class="input">{{newUser.last_name}}</h3>
+            <h3 class="input">{{newUser.email}}</h3>
+        </div>
+    </form>
+    <form class="card" action="">
+        <h1>Registrate</h1>
+        <input id="title" type="text" class="input" #newName required placeholder="Nombre">
+        <input id="title" type="text" class="input" #newLastName required placeholder="Apellido">
+        <input id="title" type="email" class="input" #newEmail required placeholder="email">
+        <input id="title" type="url" class="input" #newPhoto required placeholder="url">
+        <button type="button" on-click="newDate( newName, newLastName, newEmail, newPhoto)" class="btn third">Registrarse</button>
+        <h4 id="usAcP" class="usAc"> Usuario Actualizado</h4>
+        <h4 id="usAcN" class="usAc"> No se ha detectado cambios</h4>
+    </form>
+ </div>
