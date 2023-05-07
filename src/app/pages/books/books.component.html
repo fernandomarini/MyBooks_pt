@@ -1,0 +1,33 @@
+<section class="main">
+    <div class="section-cards" *ngIf = " books.length != 0 ; else msjVacio">
+        <ng-conteiner *ngFor = " let libro of books; let even = even">
+            <div class="card">
+                <img class="imgBook" src="{{libro.photo}}" alt="">
+                <h2>{{libro.title}}</h2>
+                <p>Autor: {{libro.author}} </p>
+                <p>Tipo: {{libro.type}} </p>               
+                <p>Precio: {{libro.price}} </p>
+                <p>idBook: {{libro.id_book | pipeIdBook }} </p>
+                <p>idUser: {{libro.id_user}} </p>
+                <button type="button" class="btn third" [ngClass]=" even / 2 === 0 ? 'btnPar' : '' "  >Comprar</button>
+            </div> 
+        </ng-conteiner>        
+    </div>
+    <ng-template #msjVacio>
+        <div class="card card-vacia">
+            <h2>Libreria Vacia</h2>
+        </div>
+    </ng-template>   
+
+    <div class="cardInput">
+        <input id="title" type="text" class="input" #newTitle required placeholder="Titulo">
+        <input id="title" type="text" class="input" #newAuthor required placeholder="Autor">
+        <input id="title" type="text" class="input" #newType required placeholder="Tipo">
+        <input id="title" type="url" class="input" #newPhoto required placeholder="Imagen">
+        <input id="title" type="number" class="input" #newPrice required placeholder="Precio">
+        <input id="title" type="number" class="input" #newId_book required placeholder="Id Book">
+        <input id="title" type="number" class="input" #newId_user required placeholder="Id User">
+        <button type="button" class="btn third" on-click="addBook( newTitle.value, newType.value, newAuthor.value, newPrice.value,
+        newPhoto.value , newId_book.value , newId_user.value )"> Añadir</button>
+    </div>  
+</section>

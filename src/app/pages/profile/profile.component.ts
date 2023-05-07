@@ -38,9 +38,7 @@ export class ProfileComponent {
         document.getElementById("usAcP").style.display = "block";
       } else{
         document.getElementById("usAcN").style.display = "block";
-      };
-      
-      
+      };      
 
   };
 };
