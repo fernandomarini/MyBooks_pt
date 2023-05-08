@@ -16,6 +16,7 @@
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     /* text-shadow: 3px 3px black; */
+    z-index: 0;
 } 
 
 .section-cards {
@@ -47,8 +48,7 @@
     box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
     backdrop-filter: blur(6px);
     border-radius: 17px;
-    text-align: center;
-    /* cursor: pointer; */
+    text-align: center;   
     transition: all 0.5s;
     display: flex;
     flex-direction: column;
@@ -67,10 +67,8 @@
     margin-top: 1vh;
   }
 
-  /* Fin Card */
-
-  
-/*   BOTON */
+  /* Fin Card */  
+ 
 .btn {
     box-sizing: border-box;
     -webkit-appearance: none;
@@ -119,7 +117,7 @@
   .btnPar{
     color: black;
   }
-  /* Fin Boton */
+/* Fin Boton*/
 
   /* CARD INPUNT */
 .cardInput{
