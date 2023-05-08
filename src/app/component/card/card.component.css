@@ -101,3 +101,16 @@
     color: black;
   }
   /* Fin Boton */
+
+  .btnClose{
+    height: 3vh;
+    width: 3vh;
+    border-radius: 200px 200px 200px 200px;
+    -webkit-border-radius: 200px 200px 200px 200px;
+    -moz-border-radius: 200px 200px 200px 200px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(133, 156, 41);
+    color: white;
+    z-index: 1;
+  }

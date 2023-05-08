@@ -9,4 +9,11 @@ import { BooksComponent } from 'src/app/pages/books/books.component';
 })
 export class CardComponent {
   @Input() bookPadre: Book;
+
+
+  public ver(){
+  console.log( "Prueba")};
+  
+
 }
+
