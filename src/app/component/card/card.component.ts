@@ -1,6 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Book } from 'src/app/models/book';
 import { BooksComponent } from 'src/app/pages/books/books.component';
+
 
 @Component({
   selector: 'app-card',
@@ -9,11 +10,12 @@ import { BooksComponent } from 'src/app/pages/books/books.component';
 })
 export class CardComponent {
   @Input() bookPadre: Book;
+  @Output() elementoBorrar = new EventEmitter<Book>();
 
-
-  public ver(){
-  console.log( "Prueba")};
-  
+  delete(){
+    this.elementoBorrar.emit(this.bookPadre);
+    
+  }
 
 }
 
