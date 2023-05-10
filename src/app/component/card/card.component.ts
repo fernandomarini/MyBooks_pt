@@ -14,6 +14,7 @@ export class CardComponent {
 
   delete(){
     this.elementoBorrar.emit(this.bookPadre);
+    
   }
 
 }
