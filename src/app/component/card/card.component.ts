@@ -13,8 +13,7 @@ export class CardComponent {
   @Output() elementoBorrar = new EventEmitter<Book>();
 
   delete(){
-    this.elementoBorrar.emit(this.bookPadre);
-    
+    this.elementoBorrar.emit(this.bookPadre);    
   }
 
 }
