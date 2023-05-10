@@ -1,7 +1,7 @@
 <section class="main">
     <div class="section-cards" *ngIf = " books.length != 0 ; else msjVacio">
         <ng-conteiner *ngFor = " let libro of books; let even = even">
-            <app-card [bookPadre]="libro" [ngClass]=" even / 2 === 0 ? 'btnPar' : '' " ></app-card>
+            <app-card [bookPadre]="libro" [ngClass]=" even / 2 === 0 ? 'btnPar' : '' " (elementoBorrar)="borrar($event)" ></app-card>
         </ng-conteiner>        
     </div>
     <ng-template #msjVacio>

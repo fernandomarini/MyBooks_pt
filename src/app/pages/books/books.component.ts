@@ -48,6 +48,13 @@ export class BooksComponent {
       this.books.push ( new Book ( newTitle, newType, newAuthor, newPrice, newPhoto, newId_book, newId_user))
 
     };
+    
+    public borrar( libroBorrar: Book){
+      let borrarBook = this.books.filter( books => books.id_book != libroBorrar.id_book)
+    
+      this.books = borrarBook;
+    }
+
 
 
 };
