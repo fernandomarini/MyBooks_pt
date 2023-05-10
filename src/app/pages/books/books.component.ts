@@ -49,11 +49,6 @@ export class BooksComponent {
 
     };
 
-    public borrar( libroBorrar: Book){
-      let borrarBook = this.books.filter( books => books.id_book != libroBorrar.id_book)
-    
-      this.books = borrarBook;
-    }
 
 };
 
