@@ -1,0 +1,14 @@
+<section class="main">
+    <div class="cardInput">
+        <h1>Añadir Libro</h1>
+        <input id="title" type="text" class="input" #newTitle required placeholder="Titulo">
+        <input id="title" type="text" class="input" #newAuthor required placeholder="Autor">
+        <input id="title" type="text" class="input" #newType required placeholder="Tipo">
+        <input id="title" type="url" class="input" #newPhoto required placeholder="Imagen">
+        <input id="title" type="number" class="input" #newPrice required placeholder="Precio">
+        <input id="title" type="number" class="input" #newId_book required placeholder="Id Book">
+        <input id="title" type="number" class="input" #newId_user required placeholder="Id User">
+        <button type="button" class="btn third" (click)=" newBook( newTitle.value, newType.value, newAuthor.value, newPrice.value,
+        newPhoto.value , newId_book.value , newId_user.value )" > Añadir</button>
+    </div>
+</section>

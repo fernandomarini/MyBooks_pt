@@ -1,4 +1,9 @@
-<section class="main">
+<section class="main">    
+    <form class="cardSearch" action="">
+        <h1>Buscar</h1>
+        <input id="title" type="number" class="input" #bookSearch required placeholder="Id Book">
+        <button type="button" class="btn third" (click)="buscarLibro(bookSearch.value)" >Buscar</button>
+    </form>
     <div class="section-cards" *ngIf = " books.length != 0 ; else msjVacio">
         <ng-conteiner *ngFor = " let libro of books; let even = even">
             <app-card [bookPadre]="libro" [ngClass]=" even / 2 === 0 ? 'btnPar' : '' " (elementoBorrar)="borrar($event)" ></app-card>
@@ -9,16 +14,5 @@
             <h2>Libreria Vacia</h2>
         </div>
     </ng-template>   
-    
-    <div class="cardInput">
-        <input id="title" type="text" class="input" #newTitle required placeholder="Titulo">
-        <input id="title" type="text" class="input" #newAuthor required placeholder="Autor">
-        <input id="title" type="text" class="input" #newType required placeholder="Tipo">
-        <input id="title" type="url" class="input" #newPhoto required placeholder="Imagen">
-        <input id="title" type="number" class="input" #newPrice required placeholder="Precio">
-        <input id="title" type="number" class="input" #newId_book required placeholder="Id Book">
-        <input id="title" type="number" class="input" #newId_user required placeholder="Id User">
-        <button type="button" class="btn third" on-click="addBook( newTitle.value, newType.value, newAuthor.value, newPrice.value,
-        newPhoto.value , newId_book.value , newId_user.value )"> Añadir</button>
-    </div>  
 </section>
+

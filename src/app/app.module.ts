@@ -12,6 +12,8 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { BooksComponent } from './pages/books/books.component';
 import { CardComponent } from './component/card/card.component';
 import { PipeIdBookPipe } from './pipes/pipe-id-book.pipe';
+import { AddBooksComponent } from './pages/add-books/add-books.component';
+import { UpdateBookComponent } from './pages/update-book/update-book.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { PipeIdBookPipe } from './pipes/pipe-id-book.pipe';
     ProfileComponent,
     BooksComponent,
     CardComponent,
-    PipeIdBookPipe
+    PipeIdBookPipe,
+    AddBooksComponent,
+    UpdateBookComponent
   ],
   imports: [
     BrowserModule,
