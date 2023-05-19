@@ -17,6 +17,5 @@ export class AddBooksComponent {
       this.bookService.add( new Book( newTitle, newType, newAuthor, newPrice, 
           newPhoto, newId_book, newId_user));  
       this.router.navigate(['/books']);  
-  };    
-
-}
+  }; 
+};

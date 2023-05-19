@@ -24,16 +24,20 @@ export class BooksService {
     ];
   };
 
+
   public add( libro: Book): void{                // FUNCIONANDO
     this.books.push(libro);
   };
+
 
   public getAll(){                               // FUNCIONANDO
     return this.books;
   };
 
+
   public getOne( id_book:number ): Book[] {     // FUNCIONANDO   
-      let bookFinal: Book[] = [];
+
+      let bookFinal: Book[] = [];      
       for ( let i = 0; i < this.books.length ; i++ ){
         if( this.books[i].id_book == id_book){
           bookFinal.push(this.books[i]);               
@@ -42,12 +46,35 @@ export class BooksService {
       return bookFinal;       
   };
 
-  public edit( book: Book){
 
-    
+  public edit( libMof: Book): boolean {      // FUNCIONANDO
+
+    let book_result: Book = null;    
+
+    for (let i = 0; i < this.books.length; i++) {
+      if (this.books[i].id_book == libMof.id_book) {
+        book_result = this.books[i]
+      };
+    };
+
+    let result: boolean;
+    if (book_result == null) {
+      result = false;
+    } else {
+        book_result.id_user = book_result.id_user; 
+        book_result.title = libMof.title;
+        book_result.type = libMof.type
+        book_result.author = libMof.author;
+        book_result.price = libMof.price;
+        book_result.photo = libMof.photo;     
+        result = true; 
+    }  
+    return result;
   };
 
+
   public delete(id_book: number): boolean {     // FUNCIONANDO
+
     for ( let i = 0; i < this.books.length ; i++ ){
       if( this.books[i].id_book == id_book){
         this.books.splice( i,1)              

@@ -4,8 +4,8 @@
         <input id="title" type="number" class="input" #bookSearch required placeholder="Ingrese Id Book">
         <button type="button" class="btn third" (click)="buscarLibro(bookSearch.value)" >Buscar</button>
     </form>
-    <div class="section-cards" *ngIf = " books.length != 0 ; else msjVacio">
-        <ng-conteiner *ngFor = " let libro of books; let even = even">
+    <div class="section-cards" *ngIf = " libros.length != 0 ; else msjVacio">
+        <ng-conteiner *ngFor = " let libro of libros; let even = even">
             <app-card [bookPadre]="libro" [ngClass]=" even / 2 === 0 ? 'btnPar' : '' " (elementoBorrar)="borrar($event)" ></app-card>
         </ng-conteiner>        
     </div>

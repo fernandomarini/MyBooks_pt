@@ -8,10 +8,8 @@
         <input id="title" type="number" class="input" #newPrice required placeholder="Precio">
         <input id="title" type="number" class="input" #newId_book required placeholder="Id Book">
         <input id="title" type="number" class="input" #newId_user required placeholder="Id User">
-        <button type="button" class="btn third"  > Modificar</button>
+        <button type="submit" class="btn third" (click)="modifyBook(newTitle.value, newType.value, newAuthor.value, newPrice.value,
+        newPhoto.value , newId_book.value , newId_user.value)"  > Modificar</button>
     </div>
 </section>
 
-
-<!-- (click)=" newBook( newTitle.value, newType.value, newAuthor.value, newPrice.value,
-        newPhoto.value , newId_book.value , newId_user.value )" -->

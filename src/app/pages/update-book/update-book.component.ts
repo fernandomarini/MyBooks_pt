@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { BooksService } from 'src/app/shared/books.service';
 import { Book } from 'src/app/models/book';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-update-book',
@@ -9,12 +10,24 @@ import { Book } from 'src/app/models/book';
 })
 export class UpdateBookComponent {
 
-  public books: Book[]
+  public libroModifocado: Book;
 
-  constructor ( public bookService: BooksService){
+  constructor ( public bookService: BooksService, private router: Router){
 
   };
 
-  
 
-};
+    public modifyBook (  newTitle: string, newType: string, newAuthor: string, newPrice: number, 
+                        newPhoto: string, newId_book: number, newId_user: number  ){ 
+
+        this.libroModifocado = new Book( newTitle, newType, newAuthor, newPrice, 
+                                  newPhoto, newId_book, newId_user)
+
+        if( this.bookService.edit(this.libroModifocado) == true){
+          alert( " El libro se modifico con Exito");
+        } else {
+          alert(`El libro no pudo ser modificado. \n El id book : ${this.libroModifocado.id_book} no existe `);
+        };
+
+  };
+};    

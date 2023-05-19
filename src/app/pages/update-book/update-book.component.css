@@ -18,8 +18,8 @@
  /* CARD INPUNT */
  .cardInput{
     box-sizing: border-box;
-    width: 25vw;
-    height: 55%;
+    width: 30vw;
+    height: 55vh;
     background: rgba(217, 217, 217, 0.58);
     border: 1px solid white;
     box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
