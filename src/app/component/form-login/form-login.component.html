@@ -1,0 +1,15 @@
+<div class="main-form">
+    <form class="card" action="" [formGroup]="formLogin" (ngSubmit)="onSubmit(); formLogin.reset()" >
+        <h1>Ingresar</h1>
+
+        <input  type="email" class="input" formControlName="email" required placeholder="email"
+            [ngClass]="{'is-invalid':(formLogin.get('email').dirty || formLogin.get('email').touched ) && !formLogin.get('email').valid }">
+        <div *ngIf="formLogin.get('email').touched && !formLogin.get('email').valid "  class="invalid-feedback" > Datos invalidos </div>  
+        
+        <input  type="password" class="input" formControlName="contrasenia" required placeholder="contraseña"
+             [ngClass]="{'is-invalid':(formLogin.get('contrasenia').dirty || formLogin.get('contrasenia').touched ) && !formLogin.get('contrasenia').valid }">
+        <div *ngIf="formLogin.get('contrasenia').touched && !formLogin.get('contrasenia').valid "  class="invalid-feedback" > Datos invalidos </div>        
+
+        <button type="submit" class="btn third" [disabled]="!formLogin.valid"  >Ingresar</button>
+    </form>
+</div>

@@ -1,0 +1,18 @@
+.main {
+    height: 100vh;
+    width: 100vw;
+    background-image:url("../../../assets/img/fondo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;    
+    overflow: scroll; /* Permite tener fijo la imagen de fondo */
+    display: flex;    
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* text-shadow: 3px 3px black; */
+    z-index: 0;
+} 

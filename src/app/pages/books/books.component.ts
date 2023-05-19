@@ -19,13 +19,22 @@ export class BooksComponent {
 
   };
 
-  public buscarLibro ( id_book: number ){
-    if(id_book != 0 ) { 
-      this.bookService.getOne(id_book);    
-      this.books = this.bookService.getOne(id_book);    
-    } else { 
+  public buscarLibro ( id_book: number ){   // FUNCIONA MAL
+    if(id_book == 0 ) { 
       this.bookService.getAll();
-    };
+      console.log(this.books);     // Para probar, ELIMINAR
+  } else { 
+    this.bookService.getOne(id_book);    
+    this.books = this.bookService.getOne(id_book);      
+  };
+
+  /*   if(id_book != undefined ) {   // ORIGINAL
+        this.bookService.getOne(id_book);    
+        this.books = this.bookService.getOne(id_book);    
+    } else { 
+        this.bookService.getAll();
+        console.log(this.books);
+    }; */
   };
   
   public borrar( libroBorrar: Book){ 

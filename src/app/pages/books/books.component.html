@@ -1,7 +1,7 @@
 <section class="main">    
     <form class="cardSearch" action="">
         <h1>Buscar</h1>
-        <input id="title" type="number" class="input" #bookSearch required placeholder="Id Book">
+        <input id="title" type="number" class="input" #bookSearch required placeholder="Ingrese Id Book">
         <button type="button" class="btn third" (click)="buscarLibro(bookSearch.value)" >Buscar</button>
     </form>
     <div class="section-cards" *ngIf = " books.length != 0 ; else msjVacio">

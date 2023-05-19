@@ -14,6 +14,10 @@ import { CardComponent } from './component/card/card.component';
 import { PipeIdBookPipe } from './pipes/pipe-id-book.pipe';
 import { AddBooksComponent } from './pages/add-books/add-books.component';
 import { UpdateBookComponent } from './pages/update-book/update-book.component';
+import { LoginComponent } from './pages/login/login.component';
+import { FormLoginComponent } from './component/form-login/form-login.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -28,11 +32,14 @@ import { UpdateBookComponent } from './pages/update-book/update-book.component';
     CardComponent,
     PipeIdBookPipe,
     AddBooksComponent,
-    UpdateBookComponent
+    UpdateBookComponent,
+    LoginComponent,
+    FormLoginComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
