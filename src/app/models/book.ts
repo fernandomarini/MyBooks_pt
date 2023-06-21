@@ -8,11 +8,11 @@ export class Book {
     public id_book: number
     public id_user: number
 
-    constructor(    title: string,
-                    type: string,
+    constructor(    title: string,                    
                     author: string,
-                    price: number,
+                    type: string,                    
                     photo: string,
+                    price: number,
                     id_book: number = 0,
                     id_user: number = 0 ){
 

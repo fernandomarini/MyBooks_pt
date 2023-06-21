@@ -16,6 +16,20 @@ export class UpdateBookComponent {
 
   };
 
+    public modifyBook (  newTitle: string, newAuthor: string, newType: string, newPhoto: string, 
+                    newPrice: number, newId_book: number, newId_user: number  ){ 
+
+      let libroModif = new Book( newTitle, newAuthor, newType, newPhoto, newPrice, newId_book, newId_user);
+
+    this.bookService.edit( libroModif ).subscribe(( data )=>{
+      alert(" El libro se modifico con Exito");
+    }); 
+  };
+};
+
+
+
+/*   // *****   FORMATO ANTERIOR AL RETO NODE  *****
 
     public modifyBook (  newTitle: string, newType: string, newAuthor: string, newPrice: number, 
                         newPhoto: string, newId_book: number, newId_user: number  ){ 
@@ -30,4 +44,4 @@ export class UpdateBookComponent {
         };
 
   };
-};    
+};     */

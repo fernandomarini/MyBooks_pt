@@ -1,10 +1,46 @@
 import { Injectable } from '@angular/core';
 import { Book } from '../models/book';
+import { HttpClient } from '@angular/common/http';
 
 
 @Injectable({
   providedIn: 'root'
 })
+
+export class BooksService {
+
+  private url:string = 'http://localhost:3000/books'
+  private books: Book []
+
+  constructor( private http:HttpClient) {
+    this.getAll();
+  };
+      
+  public add( libro: Book ){                                 // FUNCIONA
+    return this.http.post(this.url, libro);
+  };
+
+  public getAll(){                                           // FUNCIONA
+    return this.http.get(this.url);
+  };
+  
+  public getOne( id_book:number ){                          // NO FUNCIONA - EN PROCESO  
+    return this.http.get(this.url + "/"+ id_book);
+  };
+
+  public edit( libMof: Book){                              // FUNCIONA
+    return this.http.put(this.url, libMof);
+  };
+
+  public delete(id_book: number){                            // FUNCIONA
+    return this.http.request('delete', this.url, {body:{id_book: id_book}}); 
+  };
+
+};
+
+
+/*   // *****   FORMATO ANTERIOR AL RETO NODE  *****
+
 export class BooksService {
 
   private books: Book []
@@ -85,3 +121,4 @@ export class BooksService {
 
 };
 
+ */
